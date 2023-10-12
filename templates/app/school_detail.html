@@ -21,7 +21,7 @@
         <td>{{schoolobj.Sprincipal}}</td>
         <td>{{schoolobj.Slocation}}</td>
     </tr>
-6g
+
     </table>
 
     <h1>Students of {{schoolobj}} are</h1>
@@ -31,6 +31,9 @@
             <h1>age of student is {{st.Stage}}</h1>
         {% endfor %}
 
+<a href="{% url 'update' pk=schoolobj.pk %}" class="btn btn-success">Update</a>
 
+
+<a href="{% url 'delete' pk=schoolobj.pk %}" class="btn btn-danger">Delete</a>
 
 {% endblock %}
